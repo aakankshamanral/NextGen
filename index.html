@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NextGen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="site-header">
+      <div class="brand-left">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#4c1d95"/></linearGradient></defs>
+            <rect width="120" height="120" rx="18" fill="url(#g)"/>
+            <g transform="translate(18,22)">
+              <circle cx="24" cy="18" r="18" fill="#fff" opacity="0.95"/>
+              <circle cx="18" cy="14" r="3" fill="#4c1d95"/>
+              <circle cx="30" cy="14" r="3" fill="#4c1d95"/>
+              <path d="M10 28 q14 10 28 0" stroke="#4c1d95" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="site-title">NextGen</h1>
+          <div class="title-sub">Learn C — gamified & modern</div>
+        </div>
+      </div>
+      <div class="brand-right">
+        <div class="chip">✨ Streak: <span id="streak">2</span> days</div>
+        <div class="chip">Level: <strong id="profile-level">2</strong></div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <a href="learn.html" class="card card-learn" role="link" aria-label="Go to Learn">
+        <h2>📘 Learn</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/3474/3474087.png" alt="Learn Icon" />
+        <p>Explore the C roadmap (5 levels)</p>
+      </a>
+
+      <a href="leaderboard.html" class="card card-leader" role="link" aria-label="Go to Leaderboard">
+        <h2>🏆 Leaderboard</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Leaderboard Icon" />
+        <p>See top learners — name, ID, score</p>
+      </a>
+
+      <a href="flashcards.html" class="card card-flash" role="link" aria-label="Go to Flashcards">
+        <h2>🧠 Flashcards</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910760.png" alt="Notes Icon" />
+        <p>Quick questions — click to flip</p>
+      </a>
+
+      <a href="profile.html" class="card card-profile" role="link" aria-label="Go to Profile">
+        <h2>👤 Profile</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" />
+        <p>Your detailed progress & stats</p>
+      </a>
+    </main>
+
+    <footer class="foot">
+      <div>Made with ❤️ for C learners — NextGen</div>
+      <div>v1.0</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

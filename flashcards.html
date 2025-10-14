@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Flashcards - NextGen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="brand" style="justify-content:space-between;align-items:center;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#8b5cf6"/>
+                <stop offset="1" stop-color="#4c1d95"/>
+              </linearGradient>
+            </defs>
+            <rect width="120" height="120" rx="18" fill="url(#g)" />
+          </svg>
+        </div>
+        <div>
+          <h1 style="font-size:36px;margin:0;color:white;">NextGen</h1>
+          <div class="title-sub">Flashcards — quick C notes</div>
+        </div>
+      </div>
+      <div>
+        <a href="index.html" style="color:var(--accent);text-decoration:none;font-weight:600;">← Back</a>
+      </div>
+    </header>
+
+    <main style="margin-top:18px;">
+      <h2 style="color:var(--accent);margin:6px 0 12px 0;">🧠 Flashcards</h2>
+      <p style="color:var(--muted);margin:0 0 18px 0;">Click a card to flip and reveal the answer. Use keyboard (Enter/Space) when focused.</p>
+
+      <section class="cards-grid" id="cardsGrid" aria-live="polite">
+        <!-- Flashcards populated here -->
+        <button class="flashcard" tabindex="0" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-q">What is a pointer?</div>
+            </div>
+            <div class="card-back">
+              <div class="card-a">&lt;Answer&gt; — A variable that stores the memory address of another variable.</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flashcard" tabindex="0" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-q">Difference between = and == ?</div>
+            </div>
+            <div class="card-back">
+              <div class="card-a">&lt;Answer&gt; — <code>=</code> is assignment; <code>==</code> is equality comparison.</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flashcard" tabindex="0" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-q">Which header provides printf?</div>
+            </div>
+            <div class="card-back">
+              <div class="card-a">&lt;Answer&gt; — <code>&lt;stdio.h&gt;</code> provides printf/scanf.</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flashcard" tabindex="0" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-q">What is a segmentation fault?</div>
+            </div>
+            <div class="card-back">
+              <div class="card-a">&lt;Answer&gt; — Accessing memory you don't own (invalid pointer dereference).</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flashcard" tabindex="0" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-q">How to declare an array of 10 ints?</div>
+            </div>
+            <div class="card-back">
+              <div class="card-a">&lt;Answer&gt; — <code>int arr[10];</code></div>
+            </div>
+          </div>
+        </button>
+      </section>
+    </main>
+
+    <footer class="foot" style="margin-top:22px;">
+      <div>Made with ❤️ for C learners — NextGen</div>
+      <div>v1.0</div>
+    </footer>
+  </div>
+
+  <script>
+    // Flip card behavior
+    (function(){
+      const cards = document.querySelectorAll('.flashcard');
+
+      function toggleCard(card){
+        const pressed = card.classList.toggle('is-flipped');
+        card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+        card.focus();
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleCard(card);
+        });
+
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleCard(card);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

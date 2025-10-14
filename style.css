@@ -1,0 +1,88 @@
+:root{
+  --bg:#08060a;
+  --panel:#0f0920;
+  --accent:#7b3cff;
+  --muted:#b9add9;
+  --glass:rgba(255,255,255,0.03);
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:linear-gradient(180deg,var(--bg),#050308);
+  font-family:Inter,system-ui,Segoe UI,Arial; color:var(--muted);
+  display:flex;align-items:flex-start;justify-content:center;padding:28px;
+}
+
+/* App container */
+.app{
+  width:1200px;max-width:96vw;min-height:640px;
+  background:linear-gradient(180deg,rgba(20,10,30,0.6),rgba(10,6,12,0.9));
+  border-radius:18px;padding:20px;box-shadow:0 20px 60px rgba(11,6,20,0.7);
+  border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;
+}
+
+/* Header with big NextGen title */
+.site-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand-left{display:flex;align-items:center;gap:12px}
+.logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#3b1266);display:flex;align-items:center;justify-content:center}
+.brand-text{}
+.site-title{margin:0;font-size:44px;color:#fff;line-height:1}
+.title-sub{font-size:13px;color:var(--muted)}
+.brand-right{display:flex;gap:10px;align-items:center}
+.chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px}
+
+/* Grid of 4 cards (smaller columns) */
+.grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px;align-items:start;
+}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.005));
+  padding:14px;border-radius:12px;min-height:160px;border:1px solid rgba(255,255,255,0.03);
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;
+  text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(11,6,20,0.6);border-color:rgba(123,60,255,0.18)}
+.card h2{margin:6px 0;color:var(--accent)}
+.card p{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* card images */
+.card img{width:78px;height:78px;display:block;margin:8px auto;border-radius:10px;object-fit:cover}
+
+/* Footer */
+.foot{display:flex;justify-content:space-between;margin-top:18px;color:rgba(255,255,255,0.25);font-size:13px;padding-top:6px}
+
+/* Leaderboard table styles (used by leaderboard.html) */
+.table-container{overflow-x:auto;margin-top:20px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);box-shadow:0 0 15px rgba(123,60,255,0.08)}
+.leader-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px;color:#d6cef5}
+.leader-table thead{background:linear-gradient(90deg,#3b1266,#7b3cff);color:#fff}
+.leader-table th,.leader-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.leader-table tbody tr:hover{background:rgba(255,255,255,0.03);transition:0.2s}
+
+/* Flashcards flip styles */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:8px}
+.flashcard{background:transparent;border:0;padding:0;perspective:1000px;cursor:pointer;outline:none;display:block;width:100%;height:150px}
+.card-inner{width:100%;height:100%;border-radius:12px;position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.9,.3,1);box-shadow:0 8px 30px rgba(11,6,20,0.6);border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+.flashcard.is-flipped .card-inner{transform:rotateY(180deg)}
+.card-front,.card-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;border-radius:12px}
+.card-front{color:#fff;font-weight:700;font-size:15px;background:linear-gradient(180deg, rgba(123,60,255,0.12), rgba(59,18,102,0.07))}
+.card-back{transform:rotateY(180deg);color:var(--muted);font-size:14px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));text-align:center;padding:16px}
+.card-back code{background:rgba(0,0,0,0.25);padding:4px 6px;border-radius:6px;font-family:monospace;font-size:13px;color:#fff}
+.flashcard:focus .card-inner,.flashcard:hover .card-inner{transform: translateY(-6px);transition: transform .18s ease}
+.flashcard.is-flipped:focus .card-inner,.flashcard.is-flipped:hover .card-inner{transform: rotateY(180deg) translateY(-6px)}
+
+/* Profile styles (fancier) */
+.profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(11,6,20,0.5)}
+.profile-head{display:flex;gap:14px;align-items:center}
+.avatar-lg{width:92px;height:92px;border-radius:12px;overflow:hidden;flex-shrink:0;background:linear-gradient(90deg,#9b6bff,#3b1166);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px}
+.pname{font-size:20px;color:#fff;margin-bottom:4px}
+.pmeta{color:var(--muted)}
+.progress{width:100%;background:rgba(255,255,255,0.02);height:14px;border-radius:999px;margin-top:10px;overflow:hidden}
+.progress-bar{height:14px;background:linear-gradient(90deg,var(--accent),#4b1c9c);border-radius:999px;color:#fff;font-size:12px;text-align:center;padding-top:1px}
+.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stat-card{background:rgba(255,255,255,0.015);padding:10px;border-radius:10px;text-align:center}
+
+/* responsive */
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.site-title{font-size:36px}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.site-title{font-size:30px}}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Profile - NextGen</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Table-style profile */
+  .profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .profile-table td {
+    padding: 10px 12px;
+  }
+  .profile-table td:first-child {
+    color: var(--accent);
+    font-weight: 600;
+    width: 160px;
+  }
+
+  /* Progress / badges section */
+  .profile-extra {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .badge {
+    background: rgba(123,60,255,0.12);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #fff;
+    flex: 1 0 140px;
+    text-align: center;
+  }
+  .progress-bar-wrapper {
+    background: rgba(255,255,255,0.02);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 10px;
+    height: 16px;
+  }
+  .progress-bar {
+    height: 16px;
+    background: linear-gradient(90deg, var(--accent), #4b1c9c);
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 16px;
+  }
+
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="profile-header">
+    <h1 style="color:white;font-size:28px;margin:0;">👤 Profile — NextGen</h1>
+    <a href="index.html" style="color:var(--accent);text-decoration:none;font-weight:600;">← Home</a>
+  </header>
+
+  <main style="margin-top:16px;">
+    <!-- Profile info table -->
+    <table class="profile-table">
+      <tr><td>Name:</td><td id="pname">Aashu</td></tr>
+      <tr><td>Score:</td><td id="p-score">250</td></tr>
+      <tr><td>Rank:</td><td id="p-rank">4</td></tr>
+      <tr><td>Level:</td><td id="p-level">2</td></tr>
+      <tr><td>Streak:</td><td id="p-streak">3 days</td></tr>
+      <tr><td>Tasks done:</td><td id="p-done">9</td></tr>
+      <tr>
+        <td>XP Progress:</td>
+        <td>
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="xp-bar">48%</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Badges / extra stats -->
+    <div class="profile-extra">
+      <div class="badge">💯 Completed Level 1</div>
+      <div class="badge">🔥 3-day Streak</div>
+      <div class="badge">🏆 Leaderboard Rank: 4</div>
+      <div class="badge">📘 5 Topics Mastered</div>
+    </div>
+  </main>
+
+  <footer class="foot" style="margin-top:22px;">
+    <div>Made with ❤️ for C learners — NextGen</div>
+    <div>v1.0</div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // populateProfile() is already in script.js
+</script>
+</body>
+</html>
