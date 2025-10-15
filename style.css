@@ -26,7 +26,11 @@ body{
 /* Header with big NextGen title */
 .site-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .brand-left{display:flex;align-items:center;gap:12px}
-.logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#3b1266);display:flex;align-items:center;justify-content:center}
+.brand-left .logo .logo-image {
+    width: 68px; 
+    height: 68px; 
+    object-fit: contain; 
+}
 .brand-text{}
 .site-title{margin:0;font-size:44px;color:#fff;line-height:1}
 .title-sub{font-size:13px;color:var(--muted)}
