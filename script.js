@@ -157,6 +157,7 @@ function populateProfile() {
   if(xpBar) { xpBar.style.width = profileData.xpPercent + '%'; xpBar.textContent = profileData.xpPercent + '%'; }
 }
 
+
 /* ---------- Auto-run on pages that include the script ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   populateLearnRoadmap();   // safe no-op if roadmap container missing
