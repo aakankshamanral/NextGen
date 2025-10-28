@@ -24,8 +24,16 @@ body{
 }
 
 /* Header with big NextGen title */
-.site-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.brand-left{display:flex;align-items:center;gap:12px}
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;gap:12px}
+
+.brand-left{
+  display:flex;
+  align-items:center;
+  gap:12px}
+  
 .brand-left .logo .logo-image {
     width: 68px; 
     height: 68px; 
