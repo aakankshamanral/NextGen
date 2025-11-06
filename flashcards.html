@@ -8,23 +8,24 @@
 
 <body>
   <div class="app">
-    <header class="brand" style="justify-content:space-between;align-items:center;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <div class="logo" aria-hidden="true">
+    <!-- Update the header to match leaderboard style -->
+    <header class="site-header">
+      <div class="brand-left">
+        <div class="logo" aria-hidden="true"> 
           <img src="icons/logo.png" alt="NextGen Logo" class="logo-image" />
         </div>
-          <h1 style="font-size:36px;margin:0;color:white;">NextGen</h1>
+        <div class="brand-text">
+          <h1 class="site-title">NextGen</h1>
           <div class="title-sub">Flashcards</div>
         </div>
       </div>
-      <div>
-        <a href="index.html" style="color:var(--accent);text-decoration:none;font-weight:600;">← Back</a>
+      <div class="brand-right">
+        <a href="index.html" class="chip">← Back</a>
       </div>
     </header>
 
-    <main style="margin-top:18px;">
-      <h2 style="color:var(--accent);margin:6px 0 12px 0;">🧠 Flashcards</h2>
-      <p style="color:var(--muted);margin:0 0 18px 0;">Click a card to flip and reveal the answer. Use keyboard (Enter/Space) when focused.</p>
+    <main>
+      <p class="title-sub">Click a card to flip and reveal the answer. Use keyboard (Enter/Space) when focused.</p>
 
       <section class="cards-grid" id="cardsGrid" aria-live="polite">
         <!-- Flashcards populated here -->
@@ -85,7 +86,7 @@
       </section>
     </main>
 
-    <footer class="foot" style="margin-top:22px;">
+    <footer class="foot">
       <div>Made with ❤️ for C learners — NextGen</div>
       <div>v1.0</div>
     </footer>

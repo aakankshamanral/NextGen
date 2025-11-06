@@ -35,8 +35,8 @@ body{
   gap:12px}
   
 .brand-left .logo .logo-image {
-    width: 68px; 
-    height: 68px; 
+    width: 40px; 
+    height: 40px; 
     object-fit: contain; 
 }
 .brand-text{}
