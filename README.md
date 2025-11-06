@@ -5,6 +5,8 @@ LIBVE SITE : https://next-gen-wheat.vercel.app/
 
 NextGen is an innovative, gamified, web-based coding platform designed to make learning programming engaging, effective, and fun. By combining interactive challenges, real-time feedback, AI-powered guidance, and gamification, NextGen redefines how programming—specifically C language—is taught and learned.
 
+
+
 Key Objectives ✨
 
 Personalized Learning: Adaptive modules and AI-driven insights tailor content to each user's skill level.
@@ -20,6 +22,9 @@ Real-Time Feedback: Instant evaluation of code submissions for better learning a
 AI-Powered Assistance: Integrated AI/LLM support for hints, code suggestions, and explanations.
 
 Community & Competition: Leaderboards, achievements, and notifications encourage healthy competition and community learning.
+
+
+
 
 Features 🚀
 
