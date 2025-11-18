@@ -1,4 +1,5 @@
 NextGen 💡
+![NextGen Logo](path/to/icons/logo.png)
 (⚠️ Project Status: In Progress 🚧)
 
 LIBVE SITE : https://next-gen-wheat.vercel.app/
