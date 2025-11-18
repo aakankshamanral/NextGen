@@ -1,5 +1,3 @@
-// Common data + small helpers used by multiple pages
-
 /* ---------- Data ---------- */
 const roadmapData = [
   { level: 1, title: 'Level 1: Basics', tasks: ['Hello World & setup','Variables & types','Input/Output','Operators','Simple program'] },
@@ -41,7 +39,6 @@ function goToPage(page){
 }
 
 /* ---------- Learn page renderer ----------
-   If learn.html is loaded, this will populate the roadmap
 */
 function populateLearnRoadmap(containerId = 'roadmap') {
   const container = document.getElementById(containerId);
